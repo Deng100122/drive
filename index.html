@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网盘登录</title>
+    <script>
+        window.onload = function () {
+            let countdown = 3;
+            const message = document.getElementById('message');
+            message.textContent = `${countdown}秒后将跳转至网盘登录界面`;
+
+            const interval = setInterval(() => {
+                countdown--;
+                if (countdown > 0) {
+                    message.textContent = `${countdown}秒后将跳转至网盘登录界面`;
+                } else {
+                    clearInterval(interval);
+                    window.location.href = 'http://myyang1alist.back1.idcfengye.com/@login?';
+                }
+            }, 1000);
+        };
+    </script>
+</head>
+<body>
+    <a>由于此站未完成网络备案，您将会重定向至大陆公共网络穿透服务器<br>您的讲求将不会被https加密，而是使用http非加密通信，请您注意信息安全</a>
+    <br>
+    <a id="message"></a>
+    <br>
+    <a>本站严禁发布违法、暴力、淫秽、色情等内容，严禁转发涉及政治敏感话题的信息。</a>
+</body>
+</html>
